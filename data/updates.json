@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "type": "release",
+    "title": "Personal site v1 launched",
+    "description": "First version of SebG-Web is live! Built with HTML, CSS, and a bit of JS.",
+    "date": "2026-07-28",
+    "unread": true
+  }
+]
