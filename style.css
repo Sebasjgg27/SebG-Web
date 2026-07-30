@@ -483,25 +483,33 @@ h2 {
 
 .social-feed {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   width: 100%;
 }
 
-#x-embed, .insta-card {
+.social-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.5rem;
   transition: border-color 0.25s var(--ease);
+  display: flex;
+  flex-direction: column;
 }
 
-#x-embed:hover, .insta-card:hover {
+.social-card > iframe,
+.social-card > .insta-preview,
+.social-card > .threads-preview {
+  flex: 1;
+  min-height: 100px;
+}
+
+.social-card:hover {
   border-color: var(--border-strong);
 }
 
-#x-embed .tweet-header,
-.insta-header {
+.social-card-header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -510,42 +518,54 @@ h2 {
   border-bottom: 1px solid var(--border);
 }
 
-#x-embed .tweet-icon,
-.insta-icon {
-  font-size: 1rem;
-}
-
-#x-embed .tweet-author,
-.insta-author {
+.social-card-author {
   font-weight: 600;
   color: var(--text);
   flex: 1;
   font-size: 0.9rem;
 }
 
-.insta-link-out {
+.x-icon {
+  font-size: 1rem;
+}
+
+.insta-icon {
+  font-size: 1rem;
+}
+
+.insta-link-out,
+.threads-link-out {
   font-family: var(--font-mono);
   color: var(--text-muted);
   font-size: 0.75rem;
   text-decoration: none;
 }
 
-.insta-link-out:hover {
+.insta-link-out:hover,
+.threads-link-out:hover {
   color: var(--sea);
 }
 
-.insta-preview {
+.insta-preview,
+.threads-preview {
   text-align: center;
   padding: 1.5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.insta-preview p {
+.insta-preview p,
+.threads-preview p {
   color: var(--text-secondary);
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-.insta-btn {
+.insta-btn,
+.threads-btn {
   display: inline-block;
   background: linear-gradient(135deg, var(--wine), var(--sea));
   color: #fff;
@@ -557,7 +577,8 @@ h2 {
   transition: transform 0.25s var(--ease);
 }
 
-.insta-btn:hover {
+.insta-btn:hover,
+.threads-btn:hover {
   transform: scale(1.04);
 }
 

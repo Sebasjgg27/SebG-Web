@@ -1,6 +1,6 @@
 # SebG-Web
 
-Personal website & repo for [@Sebasjgg27](https://github.com/Sebasjgg27).
+Personal website for [@Sebasjgg27](https://github.com/Sebasjgg27).
 
 ## Sections
 
@@ -8,7 +8,7 @@ Personal website & repo for [@Sebasjgg27](https://github.com/Sebasjgg27).
 - **About** — Bio, skills, hobbies
 - **Dev** — Live GitHub activity feed (pushes, stars, forks)
 - **Projects** — SwimTrack, Chronos Veritas, SebG-Web
-- **Social** — X follow button + Instagram profile link
+- **Social** — Threads embed, Steam mini-profile, Instagram link
 - **Contact** — Social links footer
 
 ## Run locally
@@ -35,16 +35,13 @@ Edit `data/updates.json` and add a new entry:
 ```
 Visitors will see a red badge on the page. Clicking it shows the update and marks it read.
 
-### Social embed (X/Twitter)
-The X follow button is rendered by Twitter's widget. To embed a specific tweet instead, replace the content of `#x-embed` with the embed code from [publish.twitter.com](https://publish.twitter.com).
-
 ### Profile photo
-Replace `GOPR0862.JPG` in the root directory with your own image (any square-ish photo works — it's cropped into a circle).
+Replace `GOPR0862.JPG` in the root directory with your own image.
 
 ## Tech
 
 - Pure HTML + CSS + vanilla JS
 - Google Fonts: Inter + JetBrains Mono
 - GitHub Events API for live activity
-- Twitter Widgets.js for X embed
+- Threads embed + Steam mini-profile embed
 - No frameworks, no build step
