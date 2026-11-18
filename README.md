@@ -6,9 +6,8 @@ Personal website for [@Sebasjgg27](https://github.com/Sebasjgg27).
 
 - **Hero** — Name, taglines, social links, location
 - **About** — Bio, skills, hobbies
-- **Dev** — Live GitHub activity feed (pushes, stars, forks)
+- **Dev** — Auto-updating GitHub repositories + live activity feed
 - **Projects** — SwimTrack, Chronos Veritas, SebG-Web
-- **Social** — Threads embed, Steam mini-profile, Instagram link
 - **Contact** — Social links footer
 
 ## Run locally
@@ -17,9 +16,12 @@ Personal website for [@Sebasjgg27](https://github.com/Sebasjgg27).
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000` in your browser. A local server is required for the GitHub API fetch and notification system to work.
+Open `http://localhost:8000` in your browser. A local server is required for the GitHub API fetches and notification system to work.
 
 ## How to update
+
+### Repositories
+The Dev section fetches public repos from the GitHub API on load and every 5 minutes. New public repos appear automatically; forks and archived repos are hidden. To customize a description, add the repo name to `REPO_OVERRIDES` in `script.js`.
 
 ### Changelog / Notification badge
 Edit `data/updates.json` and add a new entry:
@@ -36,12 +38,11 @@ Edit `data/updates.json` and add a new entry:
 Visitors will see a red badge on the page. Clicking it shows the update and marks it read.
 
 ### Profile photo
-Replace `GOPR0862.JPG` in the root directory with your own image.
+Replace the images in `assets/` (`hero-320.webp`, `hero-640.webp`, and the `.jpg` variants) and the fallback `GOPR0862.JPG` in the root directory. The browser picks the smallest suitable version.
 
 ## Tech
 
 - Pure HTML + CSS + vanilla JS
 - Google Fonts: Inter + JetBrains Mono
-- GitHub Events API for live activity
-- Threads embed + Steam mini-profile embed
+- GitHub Repos + Events APIs for live data
 - No frameworks, no build step

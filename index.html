@@ -19,12 +19,15 @@
     <a href="#about">About</a>
     <a href="#dev">Dev</a>
     <a href="#projects">Projects</a>
-    <a href="#social">Social</a>
     <a href="#contact">Connect</a>
   </nav>
 
   <section id="hero">
-    <img src="GOPR0862.JPG" alt="Sebastian Gonzalez" class="profile-pic">
+    <picture>
+      <source srcset="assets/hero-320.webp" media="(max-width: 480px)" type="image/webp">
+      <source srcset="assets/hero-640.webp" type="image/webp">
+      <img src="GOPR0862.JPG" alt="Sebastian Gonzalez" class="profile-pic">
+    </picture>
     <h1>Sebastian Gonzalez</h1>
     <p class="handle">@Sebasjgg27</p>
     <p class="tagline">Swimmer &amp; Little Programmer</p>
@@ -87,63 +90,30 @@
   <section id="dev">
     <h2>Seb trying to be a Dev 💻</h2>
     <div class="dev-grid">
+      <div class="activity-card activity-full">
+        <h3>Recent activity</h3>
+        <ul class="event-list"></ul>
+      </div>
       <div class="activity-card">
         <h3>Repositories</h3>
-        <ul class="repo-list">
-          <li>
-            <a href="https://github.com/Sebasjgg27/godot-interactive-guide" target="_blank" rel="noopener">godot-interactive-guide</a>
-            <p>Interactive Godot 4 / GDScript guide — learn by building a Metroidvania 2D</p>
-            <span class="lang-dot html"></span> HTML
-          </li>
-          <li>
-            <a href="https://github.com/Sebasjgg27/SebG-Web" target="_blank" rel="noopener">SebG-Web</a>
-            <p>Personal repo &amp; website — you're here!</p>
-            <span class="lang-dot html"></span> HTML
-          </li>
-          <li>
-            <a href="https://github.com/Sebasjgg27/Proyecto_Sociales" target="_blank" rel="noopener">Proyecto_Sociales</a>
-            <span class="lang-dot html"></span> HTML
-          </li>
+        <ul class="repo-list" id="repo-list">
+          <li style="color:#555;font-size:0.85rem;">Loading repositories...</li>
         </ul>
       </div>
-
       <div class="activity-card">
-        <h3>Recent Activity</h3>
-        <ul class="event-list">
+        <h3>Currently</h3>
+        <ul class="repo-list status-list">
           <li>
-            <span class="event-icon">📦</span>
-            <div>
-              <strong>Push</strong> to <a href="https://github.com/Sebasjgg27/SebG-Web" target="_blank" rel="noopener">SebG-Web</a>
-              <span class="event-date">Jul 28</span>
-            </div>
+            Shipping specialist-dance-mc
+            <p>Java on Fabric, Minecraft 1.21.11. The project I keep adding features to.</p>
           </li>
           <li>
-            <span class="event-icon">📦</span>
-            <div>
-              <strong>Push</strong> to <a href="https://github.com/Sebasjgg27/godot-interactive-guide" target="_blank" rel="noopener">godot-interactive-guide</a>
-              <span class="event-date">Jul 2</span>
-            </div>
+            Swimming
+            <p>Training for club meets. SwimTrack exists because of it.</p>
           </li>
           <li>
-            <span class="event-icon">⭐</span>
-            <div>
-              Starred <a href="https://github.com/anomalyco/opencode" target="_blank" rel="noopener">anomalyco/opencode</a>
-              <span class="event-date">Jul 27</span>
-            </div>
-          </li>
-          <li>
-            <span class="event-icon">⭐</span>
-            <div>
-              Starred <a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener">codecrafters-io/build-your-own-x</a>
-              <span class="event-date">Jul 15</span>
-            </div>
-          </li>
-          <li>
-            <span class="event-icon">🚀</span>
-            <div>
-              Created <a href="https://github.com/Sebasjgg27/SebG-Web" target="_blank" rel="noopener">SebG-Web</a> repo
-              <span class="event-date">Jul 28</span>
-            </div>
+            Learning Java
+            <p>Through a real mod instead of another tutorial.</p>
           </li>
         </ul>
       </div>
@@ -159,11 +129,14 @@
         <span class="project-badge live">Live</span>
       </div>
       <p class="project-desc">Swimming club management platform. Log times, manage meets, calculate training zones (CSS-based), and view geographic leaderboards. Free-tier web app.</p>
-      <p class="project-note">🌊 Public repo — check it out!</p>
       <div class="project-tech">
         <span>Next.js</span>
         <span>Supabase</span>
         <span>Tailwind CSS</span>
+      </div>
+      <div class="project-links">
+        <a href="https://swimtrack.app/" target="_blank" rel="noopener" class="project-link">Open app →</a>
+        <a href="https://github.com/Sebasjgg27/SwimTrack" target="_blank" rel="noopener" class="project-link">Source →</a>
       </div>
     </div>
 
@@ -192,52 +165,6 @@
         <span>CSS</span>
       </div>
       <a href="https://github.com/Sebasjgg27/SebG-Web" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
-    </div>
-  </section>
-
-  <section id="social">
-    <h2>Latest</h2>
-    <div class="social-feed">
-      <div class="social-card threads-card">
-        <div class="social-card-header">
-          <svg role="img" viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></svg>
-          <span class="social-card-author">@sebasjgg27</span>
-          <a href="https://www.threads.net/@sebasjgg27" target="_blank" rel="noopener" class="threads-link-out">View Profile</a>
-        </div>
-        <div class="threads-preview">
-          <p>Follow the latest threads →</p>
-          <a href="https://www.threads.net/@sebasjgg27" target="_blank" rel="noopener" class="threads-btn">@sebasjgg27</a>
-        </div>
-      </div>
-
-      <div class="social-card x-card">
-        <div class="social-card-header">
-          <span class="x-icon">𝕏</span>
-          <span class="social-card-author">@Sebasjgg27</span>
-        </div>
-        <a href="https://x.com/intent/tweet?screen_name=Sebasjgg27&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-lang="en" data-show-count="false">Post to @Sebasjgg27</a>
-        <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-      </div>
-
-      <div class="social-card steam-card">
-        <div class="social-card-header">
-          <svg role="img" viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.5 1.009 2.455-.397.957-1.497 1.41-2.454 1.012H7.54zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.665 0-3.015 1.353-3.015 3.015 0 1.665 1.35 3.015 3.015 3.015 1.663 0 3.015-1.35 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
-          <span class="social-card-author">Sebasjgg27</span>
-        </div>
-        <iframe src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561199443932190&appId=367520&interactive=true" style="width:100%; border:none; border-radius:8px; min-height:200px;" title="Steam Mini-Profile"></iframe>
-      </div>
-
-      <div class="social-card insta-card">
-        <div class="social-card-header">
-          <span class="insta-icon">📷</span>
-          <span class="social-card-author">sebasjgg27</span>
-          <a href="https://www.instagram.com/sebasjgg27/" target="_blank" rel="noopener" class="insta-link-out">View Profile</a>
-        </div>
-        <div class="insta-preview">
-          <p>Check out the latest posts on Instagram →</p>
-          <a href="https://www.instagram.com/sebasjgg27/" target="_blank" rel="noopener" class="insta-btn">@sebasjgg27</a>
-        </div>
-      </div>
     </div>
   </section>
 
